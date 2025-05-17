@@ -123,10 +123,10 @@ body {
     
 }
 .pricing-table {
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
     text-align: center;
-    padding: 10px;
+    
     padding-right: 0;
 }
 .pricing-table .heading{
@@ -136,8 +136,8 @@ body {
     margin-bottom: 4rem;
 }
 .block{
-    width: 90%;    
-    margin: 0 15px;
+    width: 100%;    
+    
     overflow: hidden;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -199,7 +199,7 @@ body {
 .features{
     list-style-type: none;    
     background: #FFFFFF;
-    text-align: left;
+    text-align: center;
     color: #9C9C9C;
     padding:20px 12%;
     font-size: 0.9rem;
@@ -210,7 +210,7 @@ body {
     width: 100%;
 }
 .features li span{
-   padding-right: 0.4rem; 
+   margin:auto;
 }
 .pt-footer{
     font-size: 0.95rem;
