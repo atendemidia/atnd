@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Frases</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #111; color: #0f0; }
+    .flags img { width: 90px; cursor: pointer; margin-right: 10px; border: 2px solid transparent; }
+    .flags img.active { border-color: #0f0; }
+    #frase { margin-top: 20px; background: #000; color: #0f0; padding: 20px; font-size: 28px; white-space: pre-line; border: 1px solid #0f0; min-height: 100px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 36px; margin-right: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Frase Gerada</h2>
+  <div class="flags">
+    <img src="https://flagcdn.com/w40/es.png" alt="Espanhol" onclick="setLanguage('es')" id="flag-es">
+    <img src="https://flagcdn.com/w40/gb.png" alt="Inglês" onclick="setLanguage('en')" id="flag-en">
+    <img src="https://flagcdn.com/w40/br.png" alt="Português" onclick="setLanguage('pt')" id="flag-pt">
+  </div>
+
+  <div id="frase">Clique em uma bandeira para gerar uma frase.</div>
+
+  <button onclick="gerarFrase()">Gerar nova frase</button>
+  <button onclick="copiarFrase()">Copiar</button>
+
+  <script>
+    const frasesPorIdioma = {
+      es: [
+        "Lo que duele, enseña",
+        "A veces llorar también es sanar",
+        "Me rompí para volver más fuerte",
+        "El silencio también grita",
+        "Aprendí a soltar lo que no me sana",
+        "No fue el final, fue el inicio",
+        "Sigo aquí, incluso con heridas",
+        "Todo cambia, incluso yo",
+        "No me rendí, solo respiré",
+        "Entre lágrimas, florecí"
+      ],
+      pt: [
+        "O que machuca, ensina",
+        "Chorar também é força",
+        "Quebrei pra me reconstruir",
+        "O silêncio também fala",
+        "Soltar é um tipo de cura",
+        "Não era o fim, era recomeço",
+        "Ainda tô aqui, mesmo com feridas",
+        "Tudo muda, até eu",
+        "Não desisti, só respirei",
+        "Flores nascem das dores"
+      ],
+      en: [
+        "Pain teaches the most",
+        "Crying is healing too",
+        "I broke to rebuild",
+        "Silence speaks loud",
+        "Letting go is surviving",
+        "It wasn't the end, just the start",
+        "Still here, even with wounds",
+        "Everything changes — even me",
+        "I didn’t quit, I paused",
+        "From pain, I bloomed"
+      ]
+    };
+
+    	// PT
+	// const hashtags = ["#miaumiau", "#gatotriste", "#YoYaNoQuieroMás", "#Miau"];
+    	// ES
+	// const hashtags = ["#miawmiaw", "#reggaetontriste", "#YoYaNoQuieroMás", "#sadcat"];
+    	// EN
+	 const hashtags = ["#meowmeow", "#sadcat", "#catsinging", "#YoYaNoQuieroMás"];
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.flags img').forEach(img => img.classList.remove('active'));
+      document.getElementById('flag-' + lang).classList.add('active');
+      gerarFrase();
+    }
+
+    function gerarFrase() {
+      const frases = frasesPorIdioma[currentLang];
+      const frase = frases[Math.floor(Math.random() * frases.length)];
+
+      const shuffled = [...hashtags].sort(() => 0.5 - Math.random());
+      const escolhidas = shuffled.slice(0, 3).join(' ');
+
+      document.getElementById('frase').innerText = `${frase} ${escolhidas}`;
+    }
+
+    function copiarFrase() {
+      const texto = document.getElementById('frase').innerText;
+      navigator.clipboard.writeText(texto).then(() => {
+
+      });
+    }
+
+    // Iniciar com idioma padrão
+    setLanguage(currentLang);
+  </script>
+</body>
+</html>
