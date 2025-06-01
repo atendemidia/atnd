@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar manualmente - Agenda Fut</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Mantém alinhado no topo */
+            min-height: 100vh;
+        }
+        .container {
+            width: 800px; /* Mantém tamanho fixo */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        form {
+            width: 100%; /* Ocupa toda a largura do container */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+	<img src="https://atendemidia.com.br/agendafut/images/logo.png" alt="Agenda Fut Logo" style="margin-top:30px;">
+	
+	<form id="paramForm" onsubmit="generateURL(event)" style="margin-top:30px;">
+	<label for="bar">Nome do Bar:</label><br>
+	<input type="text" id="bar" name="bar" style="margin-top: 10px; height: 30px; width: 200px; border-radius: 30px; padding:0 15px 0 15px;"" required><br><br>
+	<label for="local">Endereço:</label><br>
+	<input type="text" id="local" name="local" style="margin-top: 10px; height: 40px; width: 200px; border-radius: 30px; padding:0 15px 0 15px;" required><br><br>
+	<input hidden type="text" value="png" id="png" name="png" style="height: 10px; width: 200px; border-radius: 30px; padding:0 15px 0 15px;" required>
+	
+	<button type="submit" style="margin-top: 10px; height: 30px; color:#000; border:none; width: 210px; border-radius: 30px; background-color: #ffcc00; cursor:pointer;">Escolher modelo</button>
+
+	
+	</form>
+	
+	<div align="center" style="margin-top:50px;">
+			<a href="#" onclick="javascript:window.history.back();" class="bg-blue-light" style="color:#000 !important; font-size:16px; background:#fff; padding:10px; text-decoration:none;"><i class="fa fa-home color-blue-light"></i><em>Voltar</em></a>
+		</div>
+	
+</div>
+    <script>
+        function generateURL(event) {
+            event.preventDefault();
+            const bar = encodeURIComponent(document.getElementById('bar').value);
+            const local = encodeURIComponent(document.getElementById('local').value);
+			const png = encodeURIComponent(document.getElementById('png').value);
+            const url = `modelos.html?bar=${bar}&local=${local}&png=$(png)`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
