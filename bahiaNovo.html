@@ -1,0 +1,274 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Próximos Jogos</title>
+                <style>canvas {font-weight: normal !important;}
+				
+				@media only screen and (max-width: 768px) {
+		
+					#main{max-width: 80% !important;}
+					.match__lg_card--datetime{padding-left:0px !important;}
+					.match__lg_card {
+					border: 1px solid #ccc;
+					padding: 30px;
+					max-height: 131px !important;
+					height: 74px !important;}
+					
+					.time1 img{height:35px !important;}
+					.time2 img{height:35px !important;}
+					
+					.match__lg_card--datetime{float:none !important; width: 130px !important;  font-size:11px;}
+					.fechado{ font-size:10px; margin-top:6px; width: 190px !important;}
+					
+					.flyerForm{margin-top: -30px;}
+					
+				}
+				
+                    .match__lg { margin-bottom: 20px; }
+                    .match__lg_card { border: 1px solid #ccc; padding: 30px; max-height: 131px !important; height:54px;}
+                    .match__lg_card--league { font-weight: bold; }
+                    .match__lg_card--ht-logo, .match__lg_card--at-logo { float: left; padding-left: 20px; }
+                    .match__lg_card-logo { max-width: 50px; max-height: 50px;  }
+                    .match__lg_card--datetime {
+                        color: #fff;
+                        background-color: #000; /* Adicionando fundo para garantir contraste */
+                    }
+                    .match__lg_card--datetime span {
+                        color: #ffcc00; /* Hora em amarelo */
+                    }
+					
+					
+					
+					
+                </style>
+            </head>
+            <body style="font-family: Arial; font-weight:bold; color:#fff; background:#000;">
+			
+			<div style="padding-top:48px; padding-bottom:25px; width:187px; margin:auto;"><img src="https://atendemidia.com.br/agendafut/images/logo.png"></div>
+			
+                <div id="main" style="max-width: 60%; margin:auto;">
+                    
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Copa do Nordeste<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Confiança<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Bahia</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Confiança.png" alt="Confiança" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">QUA,</span> <span style="color: #ffcc00;">04/06 19:00</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-0" style="display:none;" value="QUA, 04/06
+          19:00" name="date" required>
+                <input type="hidden" class="team1_image-0" name="team1_image" value="fut\img\Confiança.png">
+                <input type="hidden" class="team2_image-0" name="team2_image" value="fut\img\Bahia.png">
+                <button type="button" onclick="generateFlyer(0, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-0" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Copa do Nordeste<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Náutico</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\Náutico.png" alt="Náutico" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">SÁB,</span> <span style="color: #ffcc00;">07/06 17:30</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-1" style="display:none;" value="SÁB, 07/06
+          17:30" name="date" required>
+                <input type="hidden" class="team1_image-1" name="team1_image" value="fut\img\Bahia.png">
+                <input type="hidden" class="team2_image-1" name="team2_image" value="fut\img\Náutico.png">
+                <button type="button" onclick="generateFlyer(1, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-1" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Campeonato Brasileiro<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bragantino<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Bahia</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Bragantino.png" alt="Bragantino" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">QUI,</span> <span style="color: #ffcc00;">12/06 19:00</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-2" style="display:none;" value="QUI, 12/06
+          19:00" name="date" required>
+                <input type="hidden" class="team1_image-2" name="team1_image" value="fut\img\Bragantino.png">
+                <input type="hidden" class="team2_image-2" name="team2_image" value="fut\img\Bahia.png">
+                <button type="button" onclick="generateFlyer(2, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-2" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Campeonato Brasileiro<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Atlético-MG</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\Atlético-MG.png" alt="Atlético-MG" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">SEXTA,</span> <span style="color: #ffcc00;">11/07 19:00</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-3" style="display:none;" value="SEXTA, 11/07
+          19:00" name="date" required>
+                <input type="hidden" class="team1_image-3" name="team1_image" value="fut\img\Bahia.png">
+                <input type="hidden" class="team2_image-3" name="team2_image" value="fut\img\Atlético-MG.png">
+                <button type="button" onclick="generateFlyer(3, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-3" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Campeonato Brasileiro<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Internacional</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\Internacional.png" alt="Internacional" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">TER,</span> <span style="color: #ffcc00;">15/07 19:00</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-4" style="display:none;" value="TER, 15/07
+          19:00" name="date" required>
+                <input type="hidden" class="team1_image-4" name="team1_image" value="fut\img\Bahia.png">
+                <input type="hidden" class="team2_image-4" name="team2_image" value="fut\img\Internacional.png">
+                <button type="button" onclick="generateFlyer(4, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"><div style="color:red; font-weight:bold; float:right; margin-right: 5px; width: 100px;" class="fechado">Camarote Bar fechado</div> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-4" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+                </div>
+
+                <div class="landing-menu" align="center">
+                    <br>
+                    <a href="#" onclick="javascript:window.history.back();" class="bg-blue-light" style="color:#fff; background:#000; padding:10px; text-decoration:none;">
+                        <i class="fa fa-home color-blue-light"></i><em>Voltar</em>
+                    </a>
+                </div>
+            </body>
+            </html>
+        
