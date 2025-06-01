@@ -25,8 +25,8 @@ async function generateFlyer(index, button) {
         // Carrega o background
         const background = new Image();
         background.src = params.has('bg')
-            ? `BGs/bgs-futebol-ao-vivo/${params.get('bg')}.jpg`
-            : 'BGs/bgs-futebol-ao-vivo/1.jpg';
+            ? `bgs/bgs-futebol-ao-vivo/${params.get('bg')}.jpg`
+            : 'bgs/bgs-futebol-ao-vivo/1.jpg';
 
         background.onload = function () {
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
