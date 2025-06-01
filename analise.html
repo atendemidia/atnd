@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Atende Mídia - Comunicação e Marketing</title>
+    <meta name="keywords" content="yeo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/spectre.css">
+    <link rel="stylesheet" href="./css/spectre-icons.css">
+    <link rel="stylesheet" href="./css/spectre-exp.css">
+    <link rel="stylesheet" href="./css/yeo.css">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="">
+	
+	<style type="text/css">
+  /* Global Styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  /* Form Container */
+  #mc_embed_signup {
+    
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Heading */
+  h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Labels */
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Required Field Indicator */
+  .asterisk {
+    color: red;
+  }
+
+  /* Input Fields */
+  input[type="email"],
+  input[type="text"],
+  input[type="phone"],
+  .mc-field-group input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  input[type="email"]:focus,
+  input[type="text"]:focus,
+  input[type="phone"]:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+    outline: none;
+  }
+
+  /* Radio and Checkbox Inputs */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  /* Groups of Inputs */
+  .input-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .input-group li {
+    margin-bottom: 10px;
+  }
+
+  /* Submit Button */
+  .button {
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    padding: 14px 25px;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #003d80;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #mc_embed_signup {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="phone"] {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .button {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="phone"] {
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    .button {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+
+<body>
+    <div class="yeo-slogan" style="padding-bottom:0;">
+        <div class="container yeo-header">
+            <div class="columns">
+                <div class="column col-12">
+                    <header class="navbar">
+                        <section class="navbar-section">
+                            <a class="navbar-brand logo" href="./">
+                                <img class="logo-img" src="./images/logo.png" alt=""><span>Atende Mídia</span>
+                            </a>
+                        </section>
+												<!-- Botão para abrir o menu -->
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    <!-- Overlay para fechar ao clicar fora -->
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    <!-- Menu Dropdown -->
+    <div class="menu-dropdown" id="menu">
+        <h4>Servicios</h4>
+        <a href="posicionamiento.html">Posicionamiento</a>
+        <a href="diseno.html">Diseño y Interfaz</a>
+        <a href="aplicaciones.html">Aplicaciones</a>
+
+        <h4>Trabajos</h4>
+        <a href="gastronomia.html">Gastronomía</a>
+        <a href="eventos.html">Eventos</a>
+
+        <h4>Contáctenos</h4>
+        <a href="https://linktr.ee/avanzocomunicacion">Contacto</a>
+        <a href="https://instagram.com/avanzocomunicacion">Instagram</a>
+        <a href="https://facebook.com/avanzocomunicacion">Facebook</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var overlay = document.querySelector(".menu-overlay");
+
+            if (menu.classList.contains("active")) {
+                closeMenu();
+            } else {
+                menu.classList.add("active");
+                overlay.style.display = "block";
+            }
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").classList.remove("active");
+            document.querySelector(".menu-overlay").style.display = "none";
+        }
+    </script>
+                       <!-- <section class="navbar-section hide-sm">
+                            <a class="btn btn-link" href="#we-do">Qué hacemos</a>
+							<a class="btn btn-link" href="#we-work">Cómo trabajamos</a>
+							<a class="btn btn-link" href="#price">Precios</a>
+							<a class="btn btn-link" href="#team">Nuestro equipo</a>
+							<a class="btn btn-primary btn-hire-me" href="analisis.html">Análisis gratuito</a>-->
+
+                        </section>
+                    </header>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <div class="yeo-client" style="border-bottom:solid 1px #EEA; background:none;">
+            <div class="container yeo-client-list">
+                <div class="columns">
+                    <div class="column col-12">
+                        <h3 class="feature-title">Confiado por los mejores clientes</h3>
+                        <div class="client-logo">
+                            <a href="https://es.wikipedia.org/wiki/Nestl%C3%A9" target="_blank">
+                            <img src="./images/logos/1.jpg" height="40px" alt="">
+                        </a>
+                            <a href="https://es.wikipedia.org/wiki/Bayer" target="_blank">
+                            <img src="./images/logos/2.jpg" height="40px" alt="">
+                        </a>
+                            <a href="https://en.wikipedia.org/wiki/SENAI" target="_blank">
+                            <img src="./images/logos/3.jpg" height="40px" alt="">
+                        </a>
+                            <a target="_blank">
+                            <img src="./images/logos/4.jpg" height="40px" alt="">
+                        </a>
+                            <a target="_blank">
+                            <img src="./images/logos/5.png" height="40px" alt="">
+                        </a>
+                            <a target="_blank">
+                            <img src="./images/logos/6.jpg" height="40px" alt="">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div class="yeo-work" id="we-work">
+            <div class="container yeo-body">
+                <div class="columns">
+                    <div class="column col-12 col-sm-12">
+                        <h2 class="feature-title">Análise Gratuita</h2>
+                    </div>
+                    <div class="column col-10 col-sm-12 centered">
+                        <h2 class="yeo-work-feature">
+                        Solicite uma <span class="yeo-work-feature-bold">consulta gratuita</span> para melhorar sua presença digital
+                    </h2>
+
+                    <div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+        #mc_embed_signup{false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup" style="margin-top:-20px;">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=45718d53c0e025a56fbe38f91&amp;id=62c3f26721&amp;f_id=007775e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+
+            <div class="mc-field-group"><label for="mce-EMAIL">E-mail (obrigatório) <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group"><label for="mce-LNAME">Qual @Instagram de empresa? </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div><div class="mc-field-group"><label for="mce-PHONE">WhatsApp </label><input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value=""></div><div class="mc-field-group input-group"><strong>Aceita pedidos online ou delivery? </strong><ul><li><input type="radio" name="MMERGE3" id="mce-MMERGE30" value="Sim"><label for="mce-MMERGE30">Sim</label></li><li><input type="radio" name="MMERGE3" id="mce-MMERGE31" value="No"><label for="mce-MMERGE31">Não</label></li></ul></div><div class="mc-field-group input-group"><strong>Já investe em Tráfego Pago? (Ads) </strong><ul><li><input type="radio" name="MMERGE5" id="mce-MMERGE50" value="Sim"><label for="mce-MMERGE50">Sí</label></li><li><input type="radio" name="MMERGE5" id="mce-MMERGE51" value="No"><label for="mce-MMERGE51">Não</label></li></ul></div><div class="mc-field-group input-group"><strong>Tem perfis em outras redes sociais? </strong><ul><li><input type="checkbox" name="group[21107][1]" id="mce-group[21107]-21107-0" value=""><label for="mce-group[21107]-21107-0">Facebook</label></li><li><input type="checkbox" name="group[21107][2]" id="mce-group[21107]-21107-1" value=""><label for="mce-group[21107]-21107-1">TikTok</label></li><li><input type="checkbox" name="group[21107][4]" id="mce-group[21107]-21107-2" value=""><label for="mce-group[21107]-21107-2">YouTube</label></li></ul></div><div class="mc-field-group input-group"><strong>Quem é seu público-alvo?</strong><ul><li><input type="checkbox" name="group[21108][8]" id="mce-group[21108]-21108-0" value=""><label for="mce-group[21108]-21108-0">Todos</label></li><li><input type="checkbox" name="group[21108][16]" id="mce-group[21108]-21108-1" value=""><label for="mce-group[21108]-21108-1">Turistas</label></li><li><input type="checkbox" name="group[21108][32]" id="mce-group[21108]-21108-2" value=""><label for="mce-group[21108]-21108-2">Residentes locais</label></li><li><input type="checkbox" name="group[21108][64]" id="mce-group[21108]-21108-3" value=""><label for="mce-group[21108]-21108-3">Jovens</label></li><li><input type="checkbox" name="group[21108][128]" id="mce-group[21108]-21108-4" value=""><label for="mce-group[21108]-21108-4">Familias</label></li><li><input type="checkbox" name="group[21108][256]" id="mce-group[21108]-21108-5" value=""><label for="mce-group[21108]-21108-5">Público premium</label></li></ul></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_45718d53c0e025a56fbe38f91_62c3f26721" tabindex="-1" value="">
+    </div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Solicite sua consulta">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/i9_t0-" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='MMERGE3';ftypes[3]='radio';fnames[5]='MMERGE5';ftypes[5]='radio';/*
+ * Translated default messages for the $ validation plugin.
+ * Locale: ES
+ */
+$.extend($.validator.messages, {
+  required: "Este campo es obligatorio.",
+  remote: "Por favor, rellena este campo.",
+  email: "Por favor, escribe una dirección de correo válida",
+  url: "Por favor, escribe una URL válida.",
+  date: "Por favor, escribe una fecha válida.",
+  dateISO: "Por favor, escribe una fecha (ISO) válida.",
+  number: "Por favor, escribe un número entero válido.",
+  digits: "Por favor, escribe sólo dígitos.",
+  creditcard: "Por favor, escribe un número de tarjeta válido.",
+  equalTo: "Por favor, escribe el mismo valor de nuevo.",
+  accept: "Por favor, escribe un valor con una extensión aceptada.",
+  maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+  minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
+  rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+  range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+  max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+  min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
+});}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+                      
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+	
+       <div class="yeo-footer">
+            <div class="container">
+                <div class="columns">
+                    <div class="column col-3 col-sm-6">
+                        <div class="yeo-footer-content">
+                            <h4>Serviços</h4>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="posicionamiento.html">Posicionamento</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="diseno.html">Design e Interface</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="aplicaciones.html">Aplicações</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-3 col-sm-6">
+                        <div class="yeo-footer-content">
+                            <h4>Trabalhos</h4>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="gastronomia.html">Gastronomia</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="eventos.html">Eventos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-3 col-sm-6">
+                        <div class="yeo-footer-content">
+                            <h4>Contatos</h4>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="https://wa.me/5511911894023">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://instagram.com/atendemidia">Instagram</a>
+                                </li>
+                                <!--<li class="nav-item">
+                                    <a href="https://facebook.com/avanzocomunicacion">Facebook</a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-3 col-sm-6">
+                        <div class="yeo-footer-content">
+                            <h4>Copyright</h4>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="http://atendemidia.com.br">Atende Mídia</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+       
+</body>
+
+</html>
