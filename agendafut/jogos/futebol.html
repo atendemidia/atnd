@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">	
+    <title>Agenda Fut - Escolha o time</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+				/* Estilo para o preloader */
+					#preloader {
+						position: fixed;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: #2b1d03;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						opacity: 1;
+						transition: opacity 2s ease-in-out;
+					}
+
+					#preloader img {
+						max-width: 100px; /* Ajuste o tamanho conforme necessário */
+					}
+
+					/* Estilo para esconder o preloader quando a página carregar */
+					.loaded #preloader {
+						opacity: 0;
+					}
+
+	
+				body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f0f0;
+				margin: 0;
+				padding: 0;
+			}
+
+			.gallery {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				max-width: 400px;
+				margin: 20px auto;
+				padding: 20px;
+			}
+
+			.gallery-item {
+				width: calc(33.33% - 20px);
+				margin-bottom: 20px;
+				box-sizing: border-box;
+				
+				overflow: hidden;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+			
+			@media (max-width: 480px) {
+			.gallery-item{
+				width: calc(50% - 0px);
+				margin-bottom: 20px;
+				box-sizing: border-box;
+				
+				overflow: hidden;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+			}
+			
+			@media (max-width: 480px) {
+				max-height:60px;
+				margin-top:5px;
+				display: block;
+				border-radius: 8px;
+			}
+
+			.gallery-item img {
+				
+				max-height:100px;
+				margin-top:5px;
+				display: block;
+				border-radius: 8px;
+			}
+			
+			.gallery-item a{color:#fff !important; text-decoration:none;}
+
+			
+
+			
+	</style>
+</head>
+<body style="background-color:#000;">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Adiciona a classe 'loaded' ao body após 2 segundos (2000 ms)
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+    }, 2000);
+});
+</script>
+
+	<br><br>
+	<div align="center">
+	
+	<div style="padding-top:20px; margin-bottom:25px; width:187px;"><img src="https://atendemidia.com.br/agendafut/images/logo.png"></div>
+	
+	<span style="font-size:17px; padding-bottom:-40px; color:#FFF; font-family:Arial; font-weight:bold;">
+			Escolha o time:
+	</span>
+	
+	</div>
+
+	<div class="gallery" id="content" style="color:#fff;">
+		<div class="gallery-item" align="center">
+			<a id="brasil-link" href="brasilNovo.html">Brasil<br>
+            <img src="fut/times/brasil.png" alt="Imagem 3"></a>
+        </div>         
+        <div class="gallery-item" align="center">
+			<a id="bahia-link" href="bahiaNovo.html">Bahia<br>
+            <img src="fut/times/bahia.png" alt="Imagem 2"></a>
+        </div>
+        <div class="gallery-item" align="center">
+			<a id="vitoria-link" href="vitoriaNovo.html">Vitória<br>
+            <img src="fut/times/vitoria.png" alt="Imagem 3"></a>
+        </div>
+               
+		<div class="gallery-item" align="center">
+			<a id="saopaulo-link" href="saoPauloNovo.html">São Paulo<br>
+			<img src="fut/times/sao-paulo.png" alt="São Paulo"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="palmeiras-link" href="palmeirasNovo.html">Palmeiras<br>
+			<img src="fut/times/palmeiras.png" alt="Palmeiras"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="corinthians-link" href="corinthiansNovo.html">Corinthians<br>
+			<img src="fut/times/corinthians.png" alt="Corinthians"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="santos-link" href="santosNovo.html">Santos<br>
+			<img src="fut/times/santos.png" alt="Santos"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="bragantino-link" href="bragantinoNovo.html">Bragantino<br>
+			<img src="fut/times/bragantino.png" alt="Bragantino"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="flamengo-link" href="flamengoNovo.html">Flamengo<br>
+			<img src="fut/times/flamengo.png" alt="Flamengo"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="fluminense-link" href="fluminenseNovo.html">Fluminense<br>
+			<img src="fut/times/fluminense.png" alt="Fluminense"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="botafogo-link" href="botafogoNovo.html">Botafogo<br>
+			<img src="fut/times/botafogo.png" alt="Botafogo"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="vasco-link" href="vascoNovo.html">Vasco<br>
+			<img src="fut/times/vasco.png" alt="Vasco"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="barcelona-link" href="barcelonaNovo.html">Barcelona<br>
+			<img src="fut/times/barcelona.png" alt="Barcelona"></a>
+		</div>
+		<div class="gallery-item" align="center">
+			<a id="realmadrid-link" href="realMadridNovo.html">Real Madrid<br>
+			<img src="fut/times/real-madrid.png" alt="Real Madrid"></a>
+		</div>
+		
+
+		
+        <div class="gallery-item">
+            <div class="gallery" style="float:left;">
+	
+		<div align="left">
+			<a href="#" onclick="javascript:window.history.back();" class="bg-blue-light" style="color:#000 !important; font-size:16px; background:#fff; padding:10px; text-decoration:none;"><i class="fa fa-home color-blue-light"></i><em>Voltar</em></a>
+		</div>
+	
+	</div>
+        </div>
+    </div>
+
+<script>
+// Captura os parâmetros da URL atual
+const urlParams = new URLSearchParams(window.location.search);
+const selectedTheme = urlParams.get('bg');
+const bar = urlParams.get('bar');
+const local = urlParams.get('local');
+const png = urlParams.get('png');
+
+// Função para adicionar os parâmetros aos links
+function updateLinksWithParams() {
+    const links = document.querySelectorAll('.gallery-item a');
+
+    links.forEach(link => {
+        let href = link.getAttribute('href');
+
+        // Adiciona os parâmetros ao href do link
+        if (selectedTheme) {
+            href += `?bg=${selectedTheme}`;
+        }
+        if (bar) {
+            href += `&bar=${encodeURIComponent(bar)}`;
+        }
+        if (local) {
+            href += `&local=${encodeURIComponent(local)}`;
+        }
+        if (png) {
+            href += `&png=${encodeURIComponent(png)}`;
+        }
+
+        // Atualiza o atributo href do link
+        link.setAttribute('href', href);
+    });
+}
+
+// Chama a função para adicionar os parâmetros quando a página carregar
+window.onload = updateLinksWithParams;
+</script>
+
+</body>
+</html>
