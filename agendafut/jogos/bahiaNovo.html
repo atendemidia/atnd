@@ -56,48 +56,6 @@
 	
          <div class="match__lg_card" align="left">
 				<div style="float:left; width:160px; margin:auto;">
-				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Copa do Nordeste<br></div><br>
-				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
-				<div style="float:left;" align="center" class="match__lg_card--at-name text">Náutico</div>
-			</div>
-            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
-                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
-            </div>
-            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
-                <img src="fut\img\Náutico.png" alt="Náutico" class="match__lg_card-logo">
-            </div>
-            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
-                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
-                    <span style="color: #fff;">hoje</span> <span style="color: #ffcc00;">17:30</span>
-                </div>
-            </div>
-            
-			
-
-            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
-                <input type="text" class="date-0" style="display:none;" value="hoje
-          17:30" name="date" required>
-                <input type="hidden" class="team1_image-0" name="team1_image" value="fut\img\Bahia.png">
-                <input type="hidden" class="team2_image-0" name="team2_image" value="fut\img\Náutico.png">
-                <button type="button" onclick="generateFlyer(0, this)">Gerar Flyer</button>
-            </form>
-			
-			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
-
-            <canvas class="flyerCanvas-0" width="1080" height="1920" style="display: none;"></canvas>
-            
-            <script>
-            
-            </script>
-            <script src="gerar.js"></script>
-        </div>
-    </div>
-
-
-    <div class="match__lg" align="left" style="background:#000;">
-	
-         <div class="match__lg_card" align="left">
-				<div style="float:left; width:160px; margin:auto;">
 				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Campeonato Brasileiro<br></div><br>
 				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bragantino<br></div><br>
 				<div style="float:left;" align="center" class="match__lg_card--at-name text">Bahia</div>
@@ -117,16 +75,16 @@
 			
 
             <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
-                <input type="text" class="date-1" style="display:none;" value="QUI, 12/06
+                <input type="text" class="date-0" style="display:none;" value="QUI, 12/06
           19:00" name="date" required>
-                <input type="hidden" class="team1_image-1" name="team1_image" value="fut\img\Bragantino.png">
-                <input type="hidden" class="team2_image-1" name="team2_image" value="fut\img\Bahia.png">
-                <button type="button" onclick="generateFlyer(1, this)">Gerar Flyer</button>
+                <input type="hidden" class="team1_image-0" name="team1_image" value="fut\img\Bragantino.png">
+                <input type="hidden" class="team2_image-0" name="team2_image" value="fut\img\Bahia.png">
+                <button type="button" onclick="generateFlyer(0, this)">Gerar Flyer</button>
             </form>
 			
 			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
 
-            <canvas class="flyerCanvas-1" width="1080" height="1920" style="display: none;"></canvas>
+            <canvas class="flyerCanvas-0" width="1080" height="1920" style="display: none;"></canvas>
             
             <script>
             
@@ -159,14 +117,56 @@
 			
 
             <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
-                <input type="text" class="date-2" style="display:none;" value="SEXTA, 11/07
+                <input type="text" class="date-1" style="display:none;" value="SEXTA, 11/07
           19:00" name="date" required>
-                <input type="hidden" class="team1_image-2" name="team1_image" value="fut\img\Bahia.png">
-                <input type="hidden" class="team2_image-2" name="team2_image" value="fut\img\Atlético-MG.png">
-                <button type="button" onclick="generateFlyer(2, this)">Gerar Flyer</button>
+                <input type="hidden" class="team1_image-1" name="team1_image" value="fut\img\Bahia.png">
+                <input type="hidden" class="team2_image-1" name="team2_image" value="fut\img\Atlético-MG.png">
+                <button type="button" onclick="generateFlyer(1, this)">Gerar Flyer</button>
             </form>
 			
 			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
+
+            <canvas class="flyerCanvas-1" width="1080" height="1920" style="display: none;"></canvas>
+            
+            <script>
+            
+            </script>
+            <script src="gerar.js"></script>
+        </div>
+    </div>
+
+
+    <div class="match__lg" align="left" style="background:#000;">
+	
+         <div class="match__lg_card" align="left">
+				<div style="float:left; width:160px; margin:auto;">
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Copa Sul-Americana<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">América de Cali</div>
+			</div>
+            <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
+            </div>
+            <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
+                <img src="fut\img\América_de_Cali.png" alt="América de Cali" class="match__lg_card-logo">
+            </div>
+            <div align="left" class="match__lg_card--info" style="margin-top:10px;">
+                <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
+                    <span style="color: #fff;">TER,</span> <span style="color: #ffcc00;">15/07 19:00</span>
+                </div>
+            </div>
+            
+			
+
+            <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
+                <input type="text" class="date-2" style="display:none;" value="TER, 15/07
+          19:00" name="date" required>
+                <input type="hidden" class="team1_image-2" name="team1_image" value="fut\img\Bahia.png">
+                <input type="hidden" class="team2_image-2" name="team2_image" value="fut\img\América_de_Cali.png">
+                <button type="button" onclick="generateFlyer(2, this)">Gerar Flyer</button>
+            </form>
+			
+			<div style="float:right;" align="right"><div style="color:red; font-weight:bold; float:right; margin-right: 5px; width: 100px;" class="fechado"></div> <!-- Mensagem adicionada aqui --></div>
 
             <canvas class="flyerCanvas-2" width="1080" height="1920" style="display: none;"></canvas>
             
@@ -224,33 +224,33 @@
 	
          <div class="match__lg_card" align="left">
 				<div style="float:left; width:160px; margin:auto;">
-				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Copa Sul-Americana<br></div><br>
-				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Bahia<br></div><br>
-				<div style="float:left;" align="center" class="match__lg_card--at-name text">América de Cali</div>
+				<div style="float:left; font-size:10px; color:#ffcc00;"  align="left" class="match__lg_card--league">Campeonato Brasileiro<br></div><br>
+				<div style="float:left;"  align="center" class="match__lg_card--ht-name text">Fortaleza<br></div><br>
+				<div style="float:left;" align="center" class="match__lg_card--at-name text">Bahia</div>
 			</div>
             <div align="left" class="match__lg_card--ht-logo time1" style="float:left;">
-                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo" style="padding-left: 5px;">
+                <img src="fut\img\Fortaleza.png" alt="Fortaleza" class="match__lg_card-logo" style="padding-left: 5px;">
             </div>
             <div align="left" class="match__lg_card--at-logo time2" style="float:left;">
-                <img src="fut\img\América_de_Cali.png" alt="América de Cali" class="match__lg_card-logo">
+                <img src="fut\img\Bahia.png" alt="Bahia" class="match__lg_card-logo">
             </div>
             <div align="left" class="match__lg_card--info" style="margin-top:10px;">
                 <div class="match__lg_card--datetime" style="float: left; padding-left: 45px; margin-top:10px;">
-                    <span style="color: #fff;">TER,</span> <span style="color: #ffcc00;">15/07 19:00</span>
+                    <span style="color: #fff;">SEXTA,</span> <span style="color: #ffcc00;">18/07 19:00</span>
                 </div>
             </div>
             
 			
 
             <form class="flyerForm" style="background-color:#000; color:#fff; width:90px; padding:5px; float:right;">
-                <input type="text" class="date-4" style="display:none;" value="TER, 15/07
+                <input type="text" class="date-4" style="display:none;" value="SEXTA, 18/07
           19:00" name="date" required>
-                <input type="hidden" class="team1_image-4" name="team1_image" value="fut\img\Bahia.png">
-                <input type="hidden" class="team2_image-4" name="team2_image" value="fut\img\América_de_Cali.png">
+                <input type="hidden" class="team1_image-4" name="team1_image" value="fut\img\Fortaleza.png">
+                <input type="hidden" class="team2_image-4" name="team2_image" value="fut\img\Bahia.png">
                 <button type="button" onclick="generateFlyer(4, this)">Gerar Flyer</button>
             </form>
 			
-			<div style="float:right;" align="right"><div style="color:red; font-weight:bold; float:right; margin-right: 5px; width: 100px;" class="fechado"></div> <!-- Mensagem adicionada aqui --></div>
+			<div style="float:right;" align="right"> <!-- Mensagem adicionada aqui --></div>
 
             <canvas class="flyerCanvas-4" width="1080" height="1920" style="display: none;"></canvas>
             
