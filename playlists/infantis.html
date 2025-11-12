@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Músicas Infantis - Playlists</title>
+  <style>
+    :root {
+      --bg-color: #000;
+      --card-bg: #333;
+      --text-color: #fff;
+      --accent: #1db954; /* cor Spotify */
+      --deezer: #007feb;
+      --shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .playlists {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 2fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+
+    .info p {
+      font-size: 0.95rem;
+      color: #fff;
+      margin-bottom: 0px;
+      line-height: 1.4;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #fff;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .spotify {
+      background: var(--accent);
+    }
+
+    .deezer {
+      background: var(--deezer);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎵 Playlist Infantil Para Festas e Lojas</h1>
+    <p>Escolha a playlist do Spotify e comece a ouvir agora mesmo</p>
+  </header>
+
+  <section class="playlists">
+    
+    <!-- Playlist 1: Infantil -->
+    <div class="card">
+      <img src="img/Músicas-Infantis-Playlist-Spotify.png" alt="Capa Sertanejo" class="cover">
+      <div class="info">
+        <h2>Músicas Infantis Para Festas e Lojas</h2>
+        <p>Os maiores sucessos infantis para animar o público, seja em lojas ou festas de aniversários.<br><br></p>
+        <div class="buttons">
+          <a href="spotify:playlist:7lANqdJV2YciG2g1YndiQc" class="btn spotify">Ouvir no App</a>
+          <a href="https://open.spotify.com/playlist/7lANqdJV2YciG2g1YndiQc?nd=1&utm_source=google&utm_medium=ads&utm_campaign=playlist_infantil" class="btn spotify">Ouvir no Player Web</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Playlist 2: MPB / Pop 
+    <div class="card">
+      <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84de9466ced98f29759d201a63" alt="Capa MPB Pop" class="cover">
+      <div class="info">
+        <h2>🎶 MPB / Pop Ambiente</h2>
+        <p>Seleção leve e sofisticada. Ideal para cafés e restaurantes refinados.<br><br></p>
+        <div class="buttons">
+          <a href="spotify:playlist:YYYYYYY" class="btn spotify">Ouvir no App</a>
+          <a href="https://open.spotify.com/playlist/YYYYYYY?nd=1&utm_source=google&utm_medium=ads&utm_campaign=playlist_infantil" class="btn spotify">Ouvir no Player Web</a>
+        </div>
+      </div>
+    </div>
+-->
+    
+
+  </section>
+
+  <footer>
+    © 2025 Atende Mídia — Curadoria Musical para Ambientes Comerciais.
+  </footer>
+
+</body>
+</html>
+
