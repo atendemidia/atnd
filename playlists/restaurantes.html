@@ -155,8 +155,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>🎸 Sertanejo, Forró-Piseiro</h2>
         <p>Os maiores sucessos sertanejos para animar o público do seu restaurante.<br><br></p>
         <div class="buttons">
-          <a href="spotify:playlist:1c6cTZzVgPFwFy0Ayqdhni" class="btn spotify">Ouvir no App</a>
-          <a href="https://open.spotify.com/playlist/1c6cTZzVgPFwFy0Ayqdhni?nd=1&utm_source=google&utm_medium=ads&utm_campaign=playlist_sertanejo" class="btn spotify">Ouvir no Player Web</a>
+          <a href="spotify:playlist:1c6cTZzVgPFwFy0Ayqdhni" class="btn spotify" onclick="dataLayer.push({ event: 'spotify_click', playlist: 'sertanejo', tipo: 'app' })">
+  Ouvir no App</a>
+          <a href="https://open.spotify.com/playlist/1c6cTZzVgPFwFy0Ayqdhni?nd=1" class="btn spotify" onclick="dataLayer.push({ event: 'spotify_click', playlist: 'sertanejo', tipo: 'web' })">
+  Ouvir no Player Web</a>
         </div>
       </div>
     </div>
