@@ -2,3 +2,33 @@ future: true
 permalink: /:title/
 theme: minima
 title: Atende Midia & Eventos
+
+# _config.yml — SITEMAP COM SOMENTE POSTS + HOMEPAGE
+
+url: "https://atendemidia.com.br"
+baseurl: ""
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag   # opcional, mas recomendado
+
+# =================================================
+# SITEMAP: só homepage + posts (nada mais)
+# =================================================
+defaults:
+  -
+    scope:
+      path: ""                # tudo no site
+    values:
+      sitemap: false          # padrão = não entra
+  -
+    scope:
+      path: ""                # página inicial (index.md ou index.html)
+      type: pages
+    values:
+      sitemap: true           # entra sim
+  -
+    scope:
+      path: "_posts"          # pasta dos posts
+    values:
+      sitemap: true           # entra sim
