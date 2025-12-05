@@ -20,7 +20,7 @@ sitemap: false
   {% for page in site.pages %}
     {% if page.sitemap != false and page.url != "/404.html" %}
   <url>
-    <loc>{{ site.url | default: "https://seusite.com.br" }}{{ page.url | remove: "index.html" }}</loc>
+    <loc>{{ site.url | default: "https://atendemidia.com.br" }}{{ page.url | remove: "index.html" }}</loc>
     {% if page.last_modified_at %}
       <lastmod>{{ page.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
     {% elsif page.date %}
