@@ -1,0 +1,54 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Página inicial -->
+  <url>
+    <loc>{{ site.url | default: "https://atendemidia.com.br" }}</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Todas as páginas (exceto as que têm sitemap: false no front matter) -->
+  {% for page in site.pages %}
+    {% if page.sitemap != false and page.url != "/404.html" %}
+  <url>
+    <loc>{{ site.url | default: "https://seusite.com.br" }}{{ page.url | remove: "index.html" }}</loc>
+    {% if page.last_modified_at %}
+      <lastmod>{{ page.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+      <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    <priority>0.8</priority>
+  </url>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Todos os posts JÁ PUBLICADOS ou com data de hoje ou anterior -->
+{% assign now = site.time | date: '%s' %}
+{% for post in site.posts %}
+  {% assign post_date = post.date | date: '%s' %}
+  {% if post_date <= now %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.last_modified_at %}
+      <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {% endif %}
+{% endfor %}
+
+</urlset>
