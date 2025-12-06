@@ -1,102 +1,0 @@
-
-<!DOCTYPE html><html lang="en"><head>    <meta name="generator" content="Hugo 0.48" />    <meta charset="utf-8">    <meta name="robots" content="index, follow">    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">    <meta http-equiv="x-ua-compatible" content="ie=edge">    <title>Avanzo - Comunicación y Marketing</title>    <meta name="keywords" content="yeo">    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">    <link rel="stylesheet" href="./css/spectre.css">    <link rel="stylesheet" href="./css/spectre-icons.css">    <link rel="stylesheet" href="./css/spectre-exp.css">    <link rel="stylesheet" href="./css/yeo.css">    <meta property="og:title" content="">    <meta property="og:url" content="">    <meta property="og:description" content="">    <meta property="og:site_name" content="">    <meta property="og:type" content="product">    <meta property="og:image" content="">		<style>.gallery {            display: flex;            flex-wrap: wrap;            justify-content: center;            gap: 10px;            max-width: 1000px;            margin: auto;        }        .gallery img {            width: calc(33.33% - 10px);            max-width: 200px;            height: auto;            object-fit: cover;            border-radius: 8px;            cursor: pointer;            transition: transform 0.2s ease-in-out;        }        .gallery img:hover {            transform: scale(1.05);        }        /* Lightbox */        .lightbox {            position: fixed;            top: 0;            left: 0;            width: 100%;            height: 100%;            background: rgba(0, 0, 0, 0.8);            display: flex;            align-items: center;            justify-content: center;            opacity: 0;            pointer-events: none;            transition: opacity 0.3s ease;        }        .lightbox img {            max-width: 90%;            max-height: 80%;            border-radius: 8px;        }        .lightbox.show {            opacity: 1;            pointer-events: all;        }        .lightbox-close {            position: absolute;            top: 20px;            right: 20px;            font-size: 30px;            color: white;            cursor: pointer;        }	</style>		</head><body>    <div class="yeo-slogan" style="padding:0;">        <div class="container yeo-header">            <div class="columns">                <div class="column col-12">                    <header class="navbar">                        <section class="navbar-section">                            <a class="navbar-brand logo" href="./">                                <img class="logo-img" src="./images/logo.png" alt=""><span>Avanzo</span>                            </a>							</section>
-													<!-- Botão para abrir o menu -->
-    <button class="menu-button" onclick="toggleMenu()">☰</button>
-
-    <!-- Overlay para fechar ao clicar fora -->
-    <div class="menu-overlay" onclick="toggleMenu()"></div>
-
-    <!-- Menu Dropdown -->
-    <div class="menu-dropdown" id="menu">
-        <h4>Servicios</h4>
-        <a href="posicionamiento.html">Posicionamiento</a>
-        <a href="diseno.html">Diseño y Interfaz</a>
-        <a href="aplicaciones.html">Aplicaciones</a>
-
-        <h4>Trabajos</h4>
-        <a href="gastronomia.html">Gastronomía</a>
-        <a href="eventos.html">Eventos</a>
-
-        <h4>Contáctenos</h4>
-        <a href="https://linktr.ee/avanzocomunicacion">Contacto</a>
-        <a href="https://instagram.com/avanzocomunicacion">Instagram</a>
-        <a href="https://facebook.com/avanzocomunicacion">Facebook</a>
-    </div>
-
-     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            var overlay = document.querySelector(".menu-overlay");
-
-            if (menu.classList.contains("active")) {
-                closeMenu();
-            } else {
-                menu.classList.add("active");
-                overlay.style.display = "block";
-            }
-        }
-
-        function closeMenu() {
-            document.getElementById("menu").classList.remove("active");
-            document.querySelector(".menu-overlay").style.display = "none";
-        }
-    </script>
-
-	<section class="navbar-section hide-sm">								<!--<a class="btn btn-link" href="#we-do">Qué hacemos</a>								<a class="btn btn-link" href="#we-work">Cómo trabajamos</a>								<a class="btn btn-link" href="#price">Precios</a>								<a class="btn btn-link" href="#team">Nuestro equipo</a>-->								<a class="btn btn-primary btn-hire-me" href="analisis.html">Análisis gratuito</a>                        </section>                    </header>                </div>            </div>        </div>        </div>				<div class="yeo-work" id="we-work" style="padding:2rem 0 1rem 0;">            <div class="container yeo-body">                <div class="columns">                    <div class="column col-10 col-sm-12 centered">                        <h2 class="yeo-work-feature" style="font-size:35px;">                        Posicionamiento</h2><h2 class="yeo-work-feature" style=" margin-top:-15px;"> <span class="yeo-work-feature-bold">Digital</span>                    </h2>                    </div>    <section style="max-width: 100%; margin: auto;">
-    <p>En nuestra agencia, te ayudamos a que tu negocio <strong>sea encontrado en internet por las personas adecuadas</strong>. A través de estrategias avanzadas de <strong>SEO, publicidad online, redes sociales y presencia en plataformas clave</strong>, optimizamos tu visibilidad y aumentamos tus oportunidades de venta.</p>
-    
-    <h2>🔎 SEO y Posicionamiento en Google</h2>
-    <ul>
-        <li><strong>SEO Técnico y de Contenidos</strong> para mejorar la estructura y la relevancia de tu web.</li>
-        <li><strong>SEO Local</strong>, ideal para negocios con ubicación física.</li>
-        <li><strong>Optimización para Google Maps y Google Mi Negocio</strong>.</li>
-        <li><strong>Link Building y estrategias de autoridad de dominio</strong>.</li>
-    </ul>
-    
-    <h2>💰 Publicidad en Google y Redes Sociales</h2>
-    <ul>
-        <li><strong>Google Ads</strong> (Búsqueda, Display, Shopping y YouTube Ads).</li>
-        <li><strong>Facebook e Instagram Ads</strong> para aumentar el alcance de tu marca.</li>
-        <li><strong>TikTok Ads</strong> para conectar con audiencias más jóvenes.</li>
-        <li><strong>Publicidad en LinkedIn y Twitter Ads</strong> según tu tipo de negocio.</li>
-        <li><strong>Retargeting y remarketing</strong> para recuperar clientes potenciales.</li>
-    </ul>
-    
-    <h2>📍 Google Mi Negocio y SEO Local</h2>
-    <ul>
-        <li><strong>Configuración y optimización del perfil</strong> con información clave.</li>
-        <li><strong>Gestión de reseñas y reputación online</strong>.</li>
-        <li><strong>Publicaciones frecuentes</strong> con novedades, fotos y promociones.</li>
-    </ul>
-    
-    <h2>📲 Gestión de Redes Sociales y Contenidos</h2>
-    <ul>
-        <li>Creación de contenido visual atractivo y textos persuasivos.</li>
-        <li>Gestión de perfiles en <strong>Instagram, Facebook, TikTok y Twitter</strong>.</li>
-        <li>Creación de campañas de interacción y captación de seguidores.</li>
-        <li>Estrategia de contenido para aumentar visibilidad y engagement.</li>
-    </ul>
-    
-    <h2>🍽️ Inserción en Directorios y Plataformas de Pedidos</h2>
-    <ul>
-        <li><strong>Alta y optimización en plataformas como:</strong></li>
-        <ul>
-            <li><strong>Glovo, Uber Eats, Just Eat y Deliveroo</strong> (según disponibilidad).</li>
-            <li><strong>ElTenedor (TheFork), TripAdvisor y Restaurantes.com</strong>.</li>
-        </ul>
-        <li><strong>Optimización de menús y descripciones</strong> para aumentar pedidos.</li>
-        <li><strong>Gestión de promociones y estrategias de fidelización</strong>.</li>
-    </ul>
-    
-    <h2>📊 Análisis y Reportes para Mejorar Resultados</h2>
-    <ul>
-        <li><strong>Auditorías y reportes personalizados</strong>.</li>
-        <li><strong>Análisis de la competencia y benchmarking</strong>.</li>
-        <li><strong>Estrategia de optimización continua</strong>.</li>
-    </ul>
-    
-    <p>🚀 <strong>¡Convierte más visitas en clientes reales!</strong> Contáctanos y descubre cómo podemos hacer crecer tu negocio con estrategias efectivas de <strong>Posicionamiento Digital</strong>.</p>
-    
-    <p><a class="btn btn-primary btn-hire-me" href="analisis.html" style="background-color:green; border:none; font-size:15px; border-radius:30px; padding:15px 20px 40px 20px;">Solicita una consulta gratuita ahora</a></p>
-</section>
-        </div></div></div>			        <div class="yeo-client" style="border-bottom:solid 1px #EEA; background:none;">            <div class="container yeo-client-list">                <div class="columns">                    <div class="column col-12">                        <h3 class="feature-title">							Confiado por los mejores clientes                    </h3>                        <div class="client-logo">                            <a href="https://es.wikipedia.org/wiki/Nestl%C3%A9" target="_blank">                            <img src="./images/logos/1.jpg" height="40px" alt="">                        </a>                            <a href="https://es.wikipedia.org/wiki/Bayer" target="_blank">                            <img src="./images/logos/2.jpg" height="40px" alt="">                        </a>                            <a href="https://en.wikipedia.org/wiki/SENAI" target="_blank">                            <img src="./images/logos/3.jpg" height="40px" alt="">                        </a>                            <a target="_blank">                            <img src="./images/logos/4.jpg" height="40px" alt="">                        </a>                            <a target="_blank">                            <img src="./images/logos/5.png" height="40px" alt="">                        </a>                            <a target="_blank">                            <img src="./images/logos/6.jpg" height="40px" alt="">                        </a>                        </div>                    </div>                </div>            </div>        </div>        <div class="yeo-do" id="we-do">            <div class="container yeo-body">                <div class="columns">                    <div class="column col-12">                        <h2 class="feature-title">Qué hacemos</h2>                    </div>                    <div class="column col-4 col-sm-12">                        <div class="yeo-do-content">                            <img src="./images/what-we-do-1.svg" alt="">                            <h3>Estrategias de Posicionamiento</h3>                            <p>Ofrecemos servicios y soporte en herramientas de posicionamiento, branding, tráfico pagado y orgánico para empresas de cualquier nivel, ya sea a nivel mundial o local.</p>                            <!--<a href="">Saber más</a>-->                        </div>                    </div>                    <div class="column col-4 col-sm-12">                        <div class="yeo-do-content">                            <img src="./images/what-we-do-2.svg" alt="">                            <h3>Diseño/Interfaz Web</h3>                            <p>Creamos diseños gráficos y sitios web innovadores y atractivos, trabajando en interfaces intuitivas para mejorar la experiencia del usuario y que comuniquen efectivamente la identidad de tu marca.							</p>                            <!--<a href="">Learn more</a>-->                        </div>                    </div>                    <div class="column col-4 col-sm-12">                        <div class="yeo-do-content">                            <img src="./images/what-we-do-3.svg" alt="">                            <h3>Desarrollo de Aplicaciones</h3>                            <p>Soluciones tecnológicas personalizadas, optimizadas para ofrecer una experiencia de usuario fluida, accesible desde cualquier dispositivo. </p>                            <!--<a href="">Learn more</a>-->                        </div>                    </div>                </div>            </div>        </div>               <div class="yeo-footer">            <div class="container">                <div class="columns">                    <div class="column col-3 col-sm-6">                        <div class="yeo-footer-content">                            <h4>Servicios</h4>                            <ul class="nav">                                <li class="nav-item">                                    <a href="posicionamiento.html">Posicionamiento</a>                                </li>                                <li class="nav-item">                                    <a href="diseno.html">Diseño y Interfaz</a>                                </li>                                <li class="nav-item">                                    <a href="aplicaciones.html">Aplicaciones</a>                                </li>                            </ul>                        </div>                    </div>                    <div class="column col-3 col-sm-6">                        <div class="yeo-footer-content">                            <h4>Trabajos</h4>                            <ul class="nav">                                <li class="nav-item">                                    <a href="gastronomia.html">Gastronomía</a>                                </li>                                                                <li class="nav-item">                                    <a href="eventos.html">Eventos</a>                                </li>                            </ul>                        </div>                    </div>                    <div class="column col-3 col-sm-6">                        <div class="yeo-footer-content">                            <h4>Contáctenos</h4>                            <ul class="nav">                                <li class="nav-item">                                    <a href="https://linktr.ee/avanzocomunicacion">Contacto</a>                                </li>                                <li class="nav-item">                                    <a href="https://instagram.com/avanzocomunicacion">Instagram</a>                                </li>                                <li class="nav-item">                                    <a href="https://facebook.com/avanzocomunicacion">Facebook</a>                                </li>                            </ul>                        </div>                    </div>                    <div class="column col-3 col-sm-6">                        <div class="yeo-footer-content">                            <h4>Copyright</h4>                            <ul class="nav">                                <li class="nav-item">                                    <a href="http://avanzo.digital">Avanzo Digital</a>                                </li>                                                           </ul>                        </div>                    </div>                </div>            </div>        </div></body></html>
