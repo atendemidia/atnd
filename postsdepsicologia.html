@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Legendas para Psicólogos</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #ffcc00;
+        margin-bottom: 20px;
+    }
+
+    .seo-box {
+        max-width: 850px;
+        margin: 0 auto 30px auto;
+        text-align: left;
+        line-height: 1.6;
+        color: #ddd;
+        font-size: 18px;
+    }
+
+    .seo-box h2 {
+        color: #ffcc00;
+        font-size: 26px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .phrase {
+        font-size: 18px;
+        margin: 15px 0;
+        padding: 15px;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .yellow {
+        color: #ffcc00;
+    }
+
+    .copy-btn {
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    .copy-btn:hover {
+        background: #e6b800;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-top: 25px;
+    }
+
+    button:hover {
+        background: #e6b800;
+    }
+
+    .copy-alert {
+        position: absolute;
+        background: #ffcc00;
+        color: #000;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+        pointer-events: none;
+        top: -5px;
+        right: 10px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<h1>Gerador de Legendas para Psicólogos</h1>
+
+<div class="seo-box">
+    <h2>Gerador de Legendas para Psicólogos – Gratuito</h2>
+    <p>
+        Este Gerador de Legendas para Psicólogos foi criado para facilitar a produção de conteúdo nas redes
+        sociais, oferecendo textos profissionais, sensíveis e adequados ao contexto da saúde mental. Psicólogos,
+        estudantes, clínicas e profissionais da área podem utilizar essa ferramenta gratuita para gerar legendas 
+        acolhedoras, éticas e informativas com poucos cliques.
+    </p>
+    <p>
+        As frases são compostas por módulos que se combinam aleatoriamente, garantindo variedade e reduzindo repetições.
+        Cada legenda aborda acolhimento, autoconhecimento, terapia, bem-estar emocional e atendimento online — temas
+        essenciais na comunicação moderna da psicologia. Ideal para manter constância nas redes sociais de forma prática
+        e estratégica. Basta clicar em “Refresh” para gerar novos textos sempre que precisar.
+    </p>
+</div>
+
+<div id="phrases"></div>
+
+<button onclick="generatePhrases()">Refresh 🔄</button>
+
+<script>
+    const intro = [
+        "Às vezes, carregar tudo sozinho se torna pesado.",
+        "Nem sempre conseguimos dar conta de tudo sem apoio.",
+        "Quando o emocional pede socorro, escutar faz diferença.",
+        "Todos passamos por momentos que exigem mais cuidado.",
+        "Cuidar da mente é tão importante quanto cuidar do corpo.",
+        "A vida pode ficar mais leve quando você aprende a se ouvir."
+    ];
+
+    const meio = [
+        "A terapia oferece um espaço seguro para acolher sentimentos e reorganizar pensamentos.",
+        "A terapia é um ambiente de escuta que ajuda a compreender emoções e padrões.",
+        "A terapia te ajuda a encontrar clareza, equilíbrio e um novo olhar sobre o que sente.",
+        "A terapia abre caminho para autoconhecimento e fortalecimento emocional.",
+        "A terapia possibilita compreender suas próprias necessidades emocionais com profundidade.",
+        "A terapia auxilia na reorganização interna e traz direção em momentos de dúvida."
+    ];
+
+    const final = [
+        "Agende sua sessão online e cuide do que realmente importa.",
+        "O atendimento virtual está disponível para Feira de Santana e todo o Brasil.",
+        "Marque sua consulta e dê o primeiro passo para uma vida mais leve.",
+        "O consultório virtual te espera com acolhimento e sigilo.",
+        "Apoio psicológico disponível no conforto do seu espaço."
+    ];
+
+    const hashtags = [
+        "#SaudeMental #TerapiaOnline #FeiraDeSantana",
+        "#Acolhimento #PsicologiaOnline #BemEstar",
+        "#PsicologoFeiraDeSantana #AtendimentoOnline #Autocuidado",
+        "#Terapia #SaudeEmocional #Psicologia",
+        "#Ansiedade #SaudeMental #PsicologoOnline",
+        "#AtendimentoVirtual #Autoconhecimento #BemEstar"
+    ];
+
+    function gerarLegenda() {
+        const a = intro[Math.floor(Math.random() * intro.length)];
+        const b = meio[Math.floor(Math.random() * meio.length)];
+        const c = final[Math.floor(Math.random() * final.length)];
+        const h = hashtags[Math.floor(Math.random() * hashtags.length)];
+
+        let texto = `${a} ${b} ${c}\n${h}`;
+        return texto.length > 840 ? texto.slice(0, 235) + "..." : texto;
+    }
+
+    function copiarTexto(botao, texto) {
+        navigator.clipboard.writeText(texto);
+
+        const alert = botao.parentElement.querySelector(".copy-alert");
+        alert.style.opacity = 1;
+
+        setTimeout(() => {
+            alert.style.opacity = 0;
+        }, 900);
+    }
+
+    function generatePhrases() {
+        const container = document.getElementById("phrases");
+        container.innerHTML = "";
+
+        for (let i = 0; i < 5; i++) {
+            const frase = gerarLegenda();
+
+            container.innerHTML += `
+                <div class="phrase">
+                    <span class="yellow">•</span> ${frase}
+                    <button class="copy-btn" onclick="copiarTexto(this, \`${frase.replace(/`/g,'\\`')}\`)">Copiar</button>
+                    <span class="copy-alert">Copiado com sucesso</span>
+                </div>
+            `;
+        }
+    }
+
+    generatePhrases();
+</script>
+
+</body>
+</html>
