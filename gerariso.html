@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Gerador de Mini Frases sobre Riso</title>
+<title>Gerador de Mini Frases sobre o Riso</title>
 
 <style>
     body {
@@ -23,10 +23,29 @@
         margin: 10px 0;
         padding: 8px;
         border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
     }
 
     .yellow {
         color: #ffcc00;
+    }
+
+    .copy-btn {
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    .copy-btn:hover {
+        background: #e6b800;
     }
 
     button {
@@ -43,6 +62,22 @@
     button:hover {
         background: #e6b800;
     }
+
+    /* NOTIFICAÇÃO DE COPIA COM FADE */
+    .copy-alert {
+        position: absolute;
+        background: #ffcc00;
+        color: #000;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+        pointer-events: none;
+        top: -5px;
+        right: 10px;
+    }
+
 </style>
 </head>
 
@@ -78,23 +113,30 @@
     ];
 
     function frasesEspeciais() {
-        const hoje = new Date().getDay(); 
-        // 0 = Domingo, 1 = Segunda, 3 = Quarta...
-
+        const hoje = new Date().getDay();
         let especiais = [];
 
-        if (hoje === 1) { 
-            // Segunda
+        if (hoje === 1) {
             especiais.push("Sorria, mesmo numa segunda");
             especiais.push("Contrate para eventos");
         }
 
-        if (hoje === 3) { 
-            // Quarta
+        if (hoje === 3) {
             especiais.push("Sorria, amanhã já é quinta");
         }
 
         return especiais;
+    }
+
+    function copiarTexto(botao, texto) {
+        navigator.clipboard.writeText(texto);
+
+        const alert = botao.parentElement.querySelector(".copy-alert");
+        alert.style.opacity = 1;
+
+        setTimeout(() => {
+            alert.style.opacity = 0;
+        }, 900);
     }
 
     function generatePhrases() {
@@ -103,20 +145,23 @@
 
         const listaCompleta = [...frasesBase, ...frasesEspeciais()];
 
-        // Sorteia 5 frases
         const sorteadas = [];
         while (sorteadas.length < 5) {
             const f = listaCompleta[Math.floor(Math.random() * listaCompleta.length)];
             if (!sorteadas.includes(f)) sorteadas.push(f);
         }
 
-        // Exibe
         sorteadas.forEach(f => {
-            container.innerHTML += `<div class="phrase"><span class="yellow">•</span> ${f}</div>`;
+            container.innerHTML += `
+                <div class="phrase">
+                    <span class="yellow">•</span> ${f}
+                    <button class="copy-btn" onclick="copiarTexto(this, '${f.replace(/'/g, "\\'")}')">Copiar</button>
+                    <span class="copy-alert">Copiado com sucesso</span>
+                </div>
+            `;
         });
     }
 
-    // Gera frases automaticamente ao abrir
     generatePhrases();
 </script>
 
