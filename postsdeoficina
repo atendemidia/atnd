@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Posts Para Oficina</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #ffcc00;
+        margin-bottom: 20px;
+    }
+
+    .seo-box {
+        max-width: 850px;
+        margin: 0 auto 30px auto;
+        text-align: left;
+        line-height: 1.6;
+        color: #ddd;
+        font-size: 18px;
+    }
+
+    .seo-box h2 {
+        color: #ffcc00;
+        font-size: 26px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .phrase {
+        font-size: 18px;
+        margin: 15px 0;
+        padding: 15px;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .yellow {
+        color: #ffcc00;
+    }
+
+    .copy-btn {
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    .copy-btn:hover {
+        background: #e6b800;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-top: 25px;
+    }
+
+    button:hover {
+        background: #e6b800;
+    }
+
+    .copy-alert {
+        position: absolute;
+        background: #ffcc00;
+        color: #000;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+        pointer-events: none;
+        top: -5px;
+        right: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Gerador de Legendas — Serra Auto Ar</h1>
+
+<div class="seo-box">
+    <h2>Gerador de Legendas para Ar Condicionado Automotivo em Feira de Santana</h2>
+
+    <p>
+        O Gerador de Legendas da <strong>Serra Auto Ar</strong> foi desenvolvido para ajudar oficinas,
+        mecânicos, criadores de conteúdo e empresas do setor automotivo a produzirem legendas profissionais
+        para redes sociais. Todas as frases incluem automaticamente referências a 
+        <strong>Feira de Santana</strong>, <strong>Ar Condicionado Automotivo</strong> e
+        <strong>Serra Auto Ar</strong>, garantindo consistência e relevância local.
+    </p>
+
+    <p>
+        As legendas são combinadas dinamicamente, criando textos sempre diferentes e prontos para uso em
+        Instagram, Facebook, WhatsApp Business e anúncios. É ideal para quem quer manter frequência nas
+        redes sociais com conteúdo profissional, técnico e voltado ao segmento automotivo.
+        Clique em “Refresh” sempre que quiser novas opções.
+    </p>
+</div>
+
+<div id="phrases"></div>
+
+<button onclick="generatePhrases()">Refresh 🔄</button>
+
+<script>
+    // VARIAÇÕES PARA MONTAÇÃO DAS LEGENDAS
+
+    const intro = [
+        "Em Feira de Santana, quando o assunto é ar condicionado automotivo, a escolha certa é a Serra Auto Ar.",
+        "Se o ar do seu carro não está gelando e você é de Feira de Santana, traz para a Serra Auto Ar.",
+        "Para quem está em Feira de Santana e precisa de ar condicionado automotivo confiável, a Serra Auto Ar é referência.",
+        "Seu carro merece conforto. Em Feira de Santana, a Serra Auto Ar garante qualidade em ar condicionado automotivo.",
+        "Quando o calor aperta em Feira de Santana, você já sabe: Serra Auto Ar cuida do ar condicionado do seu veículo.",
+        "Se você está em Feira de Santana e busca serviço especializado, a Serra Auto Ar é líder em ar condicionado automotivo."
+    ];
+
+    const meio = [
+        "Trabalhamos com manutenção completa, instalação, higienização e peças novas ou seminovas.",
+        "Nossa equipe técnica é especializada em diagnóstico preciso e serviço garantido.",
+        "Atendemos desde veículos leves até linha pesada e agrícola com excelência.",
+        "Oferecemos serviços rápidos, eficientes e com garantia de qualidade.",
+        "Utilizamos peças de alta durabilidade e equipamentos profissionais.",
+        "Realizamos revisão completa para garantir performance e conforto no seu dia a dia."
+    ];
+
+    const final = [
+        "Conte com a Serra Auto Ar para dirigir com mais conforto e segurança.",
+        "Fale com nossa equipe e agende o melhor horário para o seu veículo.",
+        "Seu carro merece o melhor atendimento. A Serra Auto Ar está pronta para ajudar.",
+        "Entre em contato e tenha um ar mais gelado e agradável hoje mesmo.",
+        "O melhor serviço de ar automotivo em Feira de Santana está aqui."
+    ];
+
+    const hashtags = [
+        "#FeiradeSantana #ArCondicionadoAutomotivo #SerraAutoAr",
+        "#FeiradeSantana #OficinaAutomotiva #ArGelando",
+        "#FeiradeSantana #ManutençãoAutomotiva #ArDoCarro",
+        "#FeiradeSantana #LinhaPesada #ArCondicionado",
+        "#FeiradeSantana #AutoCenter #ConfortoVeicular"
+    ];
+
+    function gerarLegenda() {
+        const a = intro[Math.floor(Math.random() * intro.length)];
+        const b = meio[Math.floor(Math.random() * meio.length)];
+        const c = final[Math.floor(Math.random() * final.length)];
+        const h = hashtags[Math.floor(Math.random() * hashtags.length)];
+
+        let texto = `${a} ${b} ${c}\n${h}`;
+        return texto.length > 840 ? texto.slice(0, 235) + "..." : texto;
+    }
+
+    // FUNÇÃO DE CÓPIA COM FADE
+    function copiarTexto(botao, texto) {
+        navigator.clipboard.writeText(texto);
+
+        const alert = botao.parentElement.querySelector(".copy-alert");
+        alert.style.opacity = 1;
+
+        setTimeout(() => {
+            alert.style.opacity = 0;
+        }, 900);
+    }
+
+    // GERA 5 FRASES NO REFRESH
+    function generatePhrases() {
+        const container = document.getElementById("phrases");
+        container.innerHTML = "";
+
+        for (let i = 0; i < 5; i++) {
+            const frase = gerarLegenda();
+
+            container.innerHTML += `
+                <div class="phrase">
+                    <span class="yellow">•</span> ${frase}
+                    <button class="copy-btn" onclick="copiarTexto(this, \`${frase.replace(/`/g,'\\`')}\`)">Copiar</button>
+                    <span class="copy-alert">Copiado com sucesso</span>
+                </div>
+            `;
+        }
+    }
+
+    generatePhrases();
+</script>
+
+</body>
+</html>
