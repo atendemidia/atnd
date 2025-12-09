@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Mini Frases sobre Riso</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #ffcc00;
+        margin-bottom: 20px;
+    }
+
+    .phrase {
+        font-size: 22px;
+        margin: 10px 0;
+        padding: 8px;
+        border-bottom: 1px solid #333;
+    }
+
+    .yellow {
+        color: #ffcc00;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-top: 25px;
+    }
+
+    button:hover {
+        background: #e6b800;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Gerador de Mini Frases</h1>
+
+<div id="phrases"></div>
+
+<button onclick="generatePhrases()">Refresh 🔄</button>
+
+<script>
+    const frasesBase = [
+        "Sorria, amanhã é sexta!",
+        "Já sorriu hoje?",
+        "Humor salva qualquer dia.",
+        "Sorriso é grátis, use.",
+        "Seu evento merece risadas.",
+        "Contrate p/ confra da firma.",
+        "Contrate para confraternizações.",
+        "Humor conecta.",
+        "Leve humor p/ seu evento.",
+        "Sorrir muda tudo.",
+        "Humor = energia positiva.",
+        "Sorrir aproxima.",
+        "O riso é o melhor brinde.",
+        "A vida fica leve com humor.",
+        "Evento bom tem humor.",
+        "Agenda aberta!",
+        "Anime sua festa!",
+        "Contrate para eventos.",
+        "Rir nunca sai de moda.",
+    ];
+
+    function frasesEspeciais() {
+        const hoje = new Date().getDay(); 
+        // 0 = Domingo, 1 = Segunda, 3 = Quarta...
+
+        let especiais = [];
+
+        if (hoje === 1) { 
+            // Segunda
+            especiais.push("Sorria, mesmo numa segunda");
+            especiais.push("Contrate para eventos");
+        }
+
+        if (hoje === 3) { 
+            // Quarta
+            especiais.push("Sorria, amanhã já é quinta");
+        }
+
+        return especiais;
+    }
+
+    function generatePhrases() {
+        const container = document.getElementById("phrases");
+        container.innerHTML = "";
+
+        const listaCompleta = [...frasesBase, ...frasesEspeciais()];
+
+        // Sorteia 5 frases
+        const sorteadas = [];
+        while (sorteadas.length < 5) {
+            const f = listaCompleta[Math.floor(Math.random() * listaCompleta.length)];
+            if (!sorteadas.includes(f)) sorteadas.push(f);
+        }
+
+        // Exibe
+        sorteadas.forEach(f => {
+            container.innerHTML += `<div class="phrase"><span class="yellow">•</span> ${f}</div>`;
+        });
+    }
+
+    // Gera frases automaticamente ao abrir
+    generatePhrases();
+</script>
+
+</body>
+</html>
